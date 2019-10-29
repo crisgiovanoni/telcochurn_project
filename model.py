@@ -28,5 +28,5 @@ def model_by_cart(X,y,algorithm='entropy',depth=3):
     clf = clf.fit(X,y)
     yhat = clf.predict(X)
     yhat_proba = clf.predict_proba(X)
-    return yhat, yhat_proba
+    return yhat, yhat_proba, clf
     
