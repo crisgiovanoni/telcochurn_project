@@ -33,8 +33,8 @@ def yes_no_to_boolean(x):
     """
     return 1 if x == "Yes" else 0
 
-def order_encode(df,category_list,new_name):
-    enc = OrdinalEncoder(categories=category_list,dtype=int)
+def order_encode(df,category_list):
+    enc = OrdinalEncoder(categories=[category_list],dtype=int)
     enc = enc.fit(df)
     enc = enc.transform(df)
     return enc
